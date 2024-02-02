@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Sum {
  
- //Adding Two numbers using function
+ //****    Adding Two numbers using function     ****
   
   // class Prog
   //   {
@@ -20,7 +20,7 @@ namespace Sum {
   //       }
   //   } 
 
-  //Factorial function using recursion
+  //*****    Factorial function using recursion   *****
   
 //       public long Factorial(int n)
 //     {
@@ -42,7 +42,7 @@ namespace Sum {
 //     }
 // }
 
-  // Using refrence variable as a parameter finding factorial
+  // ****    Using refrence variable as a parameter finding factorial    ****
 
     //  long FactRef(int n, ref int f)
     // {
@@ -63,7 +63,7 @@ namespace Sum {
     //     Console.WriteLine("Here is the factorial - {0}", f);
     // }
 
-   // out parameter means returning more than one diffrent type of value 
+   //****   using (out) parameter means returning more than one diffrent type of value   ****
 
  //  public void show(int Empno,out string name,out int Sallary)
  // {
@@ -90,7 +90,8 @@ namespace Sum {
 
  // }
 
- // Value type stored in Stack and reference type will be stored in Heap
+ // ****  Value type stored in Stack and reference type will be stored in Heap   ****
+ 
   //int n;
   // public static void Main(string[] args)
   // {
@@ -104,7 +105,7 @@ namespace Sum {
 
   // }
 
- // How Strings are stored in c#
+ // ***   How Strings are stored in c#   ***
 
   // public static void Main(string[] args)
   // {
@@ -116,7 +117,7 @@ namespace Sum {
   //     Console.WriteLine(s5.GetHashCode());  // Conclusion for same value there is no new memory allocate
   // }
 
- // using Params keyword  for taking n number of arguments 
+ //****  using Params keyword  for taking n number of arguments   ***
 
 //  public void show(params string[] name)
 // {  
@@ -135,5 +136,24 @@ namespace Sum {
 //     obj.show("XOCAAR", "LUCIAN", "SLUG");
 // }
 
+  //****    BOXING and Unboxing      ****
+
+  //  public static void Main(string[] args)
+  // {
+  //     int x = 20;
+  //     string name = "XOCAAR";
+  //     Program obj = new Program();
+  //     /*   Boxing  */
+  //     object y = x;
+  //     object z = name;
+
+  //     /*   Unboxing */
+
+  //     int x1 = (Int32)y;
+  //     string y1 = (String)z;
+
+  //     Console.WriteLine(x1 + " " + y1);
+      
+  // }
  
 }
