@@ -116,17 +116,17 @@ namespace Sum {
   //     Console.WriteLine(s5.GetHashCode());  // Conclusion for same value there is no new memory allocate
   // }
 
- // using Params keyword  for taking n number of arguments
+ // using Params keyword  for taking n number of arguments 
 
 //  public void show(params string[] name)
-// {
+// {  
 //     foreach(string s in name)
 //     {
 //         Console.Write(s +" ");
 //     }
 //     Console.WriteLine();
 // }
-// public static void Main(string[] args)
+// public static void Main(string[] args) // params is a keyword which is used to specify a parameter that takes variable number of arguments.
 // {
 //     Program obj = new Program();
 //     obj .show();
