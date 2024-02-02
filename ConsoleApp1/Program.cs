@@ -91,7 +91,7 @@ namespace Sum {
  // }
 
  // Value type stored in Stack and reference type will be stored in Heap
-
+  //int n;
   // public static void Main(string[] args)
   // {
   //     Program obj1 = new Program();
@@ -102,5 +102,17 @@ namespace Sum {
   //     Console.WriteLine(obj1.GetHashCode());
   //     Console.WriteLine(obj2.GetHashCode());
 
+  // }
+
+ // How Strings are stored in c#
+
+  // public static void Main(string[] args)
+  // {
+  //     string s1="XOCAAR", s2="xocaar", s3="Xocaar", s4="xocaaR",s5="XOCAAR";
+  //     Console.WriteLine(s1.GetHashCode());
+  //     Console.WriteLine(s2.GetHashCode());
+  //     Console.WriteLine(s3.GetHashCode());
+  //     Console.WriteLine(s4.GetHashCode());
+  //     Console.WriteLine(s5.GetHashCode());  // Conclusion for same value there is no new memory allocate
   // }
 }
