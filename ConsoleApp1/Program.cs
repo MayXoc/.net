@@ -89,4 +89,16 @@ namespace Sum {
  //     Console.WriteLine("Employ name {0} and his sallary {1}", name, Sallary);
 
  // }
+
+ // Value type stored in Stack and reference type will be stored in Heap
+
+  // public static void Main(string[] args)
+  // {
+  //     Program obj1 = new Program();
+  //     obj1.n = 1;
+  //     Program obj2 = obj1;
+  //     obj2.n = 2;
+  //     Console.WriteLine(obj1.n);
+
+  // }
 }
