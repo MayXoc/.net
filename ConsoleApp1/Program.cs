@@ -115,4 +115,25 @@ namespace Sum {
   //     Console.WriteLine(s4.GetHashCode());
   //     Console.WriteLine(s5.GetHashCode());  // Conclusion for same value there is no new memory allocate
   // }
+
+ // using Params keyword  for taking n number of arguments
+
+//  public void show(params string[] name)
+// {
+//     foreach(string s in name)
+//     {
+//         Console.Write(s +" ");
+//     }
+//     Console.WriteLine();
+// }
+// public static void Main(string[] args)
+// {
+//     Program obj = new Program();
+//     obj .show();
+//     obj .show("Xocaar");
+//     obj.show("XOCAAR", "LUCIAN");
+//     obj.show("XOCAAR", "LUCIAN", "SLUG");
+// }
+
+ 
 }
