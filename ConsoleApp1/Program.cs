@@ -63,4 +63,30 @@ namespace Sum {
     //     Console.WriteLine("Here is the factorial - {0}", f);
     // }
 
+   // out parameter means returning more than one diffrent type of value 
+
+ //  public void show(int Empno,out string name,out int Sallary)
+ // {
+ //     if (Empno == 1)
+ //     {
+ //         name = "Xocaar";
+ //         Sallary = 10000000;
+ //     }
+ //     else
+ //     {
+ //         name = "NOT FOUND";
+ //         Sallary =0;
+ //     }
+ // }
+ // static void Main(string[] args)
+ // {
+ //     int EmpNo, Sallary;
+ //     string name;
+ //     Program obj = new Program();
+ //     Console.WriteLine("Enter Employ no - ");
+ //     EmpNo = Convert.ToInt32( Console.ReadLine() );
+ //     obj.show(EmpNo, out name, out Sallary);
+ //     Console.WriteLine("Employ name {0} and his sallary {1}", name, Sallary);
+
+ // }
 }
