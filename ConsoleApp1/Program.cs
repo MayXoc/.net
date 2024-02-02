@@ -99,6 +99,8 @@ namespace Sum {
   //     Program obj2 = obj1;
   //     obj2.n = 2;
   //     Console.WriteLine(obj1.n);
+  //     Console.WriteLine(obj1.GetHashCode());
+  //     Console.WriteLine(obj2.GetHashCode());
 
   // }
 }
