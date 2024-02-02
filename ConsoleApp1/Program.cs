@@ -1,5 +1,6 @@
 ﻿using System;
 namespace Sum {
+ 
  //Adding Two numbers using function
   
   // class Prog
@@ -41,5 +42,25 @@ namespace Sum {
 //     }
 // }
 
-  
+  // Using refrence variable as a parameter finding factorial
+
+    //  long FactRef(int n, ref int f)
+    // {
+    //     for(int i = 1; i <= n; i++)
+    //     {
+    //         f = f * i;
+    //     }
+    //     return f;
+    // }
+    // public static void Main(string[] args)
+    // {
+    //     int n, f;
+    //     Console.WriteLine("Enter number - ");
+    //     n = Convert.ToInt32(Console.ReadLine());
+    //     f = 1;
+    //     Program obj = new Program();
+    //     obj.FactRef(n, ref f);
+    //     Console.WriteLine("Here is the factorial - {0}", f);
+    // }
+
 }
