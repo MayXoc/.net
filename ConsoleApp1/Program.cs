@@ -155,5 +155,32 @@ namespace Sum {
   //     Console.WriteLine(x1 + " " + y1);
       
   // }
+
+
+// ****      Method overloading        *****
+
+ // void show()
+ // {
+ //     Console.WriteLine("hello");
+ // }
+ // void show(int n)
+ // {
+ //     Console.WriteLine(n);
+ // }
+ // void show(int n, string s)
+ // {
+ //     Console.WriteLine(s + " " + n);
+ // }
+
+ // public static void Main(string[] args)
+ // {
+ //     int a;
+ //     string? userName = Console.ReadLine();
+ //     a = Convert.ToInt32(Console.ReadLine());
+ //     Program obj = new Program();
+ //     obj.show();
+ //     obj.show(a);
+ //     obj.show(a, userName);
+ // }
  
 }
