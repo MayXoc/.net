@@ -220,4 +220,19 @@ namespace Sum {
 //     Console.WriteLine(p);
     
 // }
+
+
+ // ********* Static Constructor
+  //  int x;
+  // double y;
+  // string name;
+  // // using static constructor 
+  // static Program()
+  // {
+  //     Console.WriteLine("This is static constructor");
+  // }
+  // public static void Main(string[] args)
+  // {
+
+  // }
 }
