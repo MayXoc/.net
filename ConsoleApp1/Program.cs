@@ -299,6 +299,7 @@ namespace Sum {
 
 
    // ******** Inheritance and inheritance using constructor also using base keyword
+ 
 
 //    class X {
 //     public X()
@@ -329,6 +330,45 @@ namespace Sum {
 //     public static void Main(string[] args) {
 //         Y obj = new Y();
 //         obj.show();
+//     }
+// }
+
+
+
+  // ******* using base constructor to pass data from derived to base class
+
+ 
+//  class X {
+//     int a;
+//     int b; int c; int d;
+//     public X(int A,int B,int C,int D)
+//     {
+//         this.a = A;
+//         this.b = B;
+//         this.c = C;
+//         this.d = D;
+//     }
+//     public override string ToString()
+//     {
+//         return "A = " + a + " B = " + b + " C = " + c + " D = " + d;
+//     }
+
+// }
+
+// class Y : X {
+//     public Y(int a,int b,int c ,int d) : base(a, b, c, d)
+//     {
+
+//     }
+   
+// }
+
+
+// class Program
+// {
+//     public static void Main(string[] args) {
+//         Y obj = new Y(2,4,5,7);
+//         Console.WriteLine(obj);
 //     }
 // }
 }
