@@ -105,7 +105,8 @@ namespace Sum {
 
   // }
 
- // ***   How Strings are stored in c#   ***
+ // ***   How Strings are stored in c#   *******
+ 
 
   // public static void Main(string[] args)
   // {
@@ -117,7 +118,9 @@ namespace Sum {
   //     Console.WriteLine(s5.GetHashCode());  // Conclusion for same value there is no new memory allocate
   // }
 
- //****  using Params keyword  for taking n number of arguments   ***
+ //****  using Params keyword  for taking n number of arguments   *****
+
+ 
 
 //  public void show(params string[] name)
 // {  
@@ -158,6 +161,7 @@ namespace Sum {
 
 
 // ****      Method overloading        *****
+ 
 
  // void show()
  // {
@@ -185,6 +189,8 @@ namespace Sum {
 
      // ****** Celcius to farenheit  ******
 
+ 
+
  //  double ChangeCenToFeren(double c)
  // {
  //     double f = ((9 * c) / 5) + 32;
@@ -203,6 +209,8 @@ namespace Sum {
 
 
 //******   overriding ToString method    *******
+
+ 
 // int x;
 // double y;
 // string? name;
@@ -223,6 +231,8 @@ namespace Sum {
 
 
  // ********* Static Constructor
+
+ 
   //  int x;
   // double y;
   // string name;
@@ -237,6 +247,8 @@ namespace Sum {
   // }
 
      // ******  instance Constructor  and constructor overloading
+
+ 
 //     int x;
 //     double y;
 //     string? name;
@@ -270,4 +282,18 @@ namespace Sum {
 //     }
 
 // }
+
+
+      // ******* Static members   ******
+ 
+        // static int n;
+        // static void Main(string[] args)
+        // {
+
+        //     Program.n = 56;
+          
+        //     Console.WriteLine(Program.n);
+
+        //     // hence Console is a class and WriteLine is static method;
+        // }
 }
