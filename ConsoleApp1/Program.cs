@@ -200,5 +200,24 @@ namespace Sum {
  //     c = Convert.ToDouble(Console.ReadLine());
  //     Console.WriteLine("Here Cel to fer value  {0} - ",obj.ChangeCenToFeren(c));
  // }
- 
+
+
+//******   overriding ToString method    *******
+// int x;
+// double y;
+// string? name;
+// public override string ToString()
+// {
+//     return "Employ no - " + x + " Experience " + y + " Name " + name;
+// }
+
+// public static void Main(string[] args)
+// {
+//     Program p = new Program();
+//     p.x = 1;
+//     p.y = 2.5;
+//     p.name = "XOCAAR";
+//     Console.WriteLine(p);
+    
+// }
 }
