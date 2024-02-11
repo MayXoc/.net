@@ -235,4 +235,39 @@ namespace Sum {
   // {
 
   // }
+
+     // ******  instance Constructor  and constructor overloading
+//     int x;
+//     double y;
+//     string? name;
+    
+//     static Program()
+//     {
+//         Console.WriteLine("This is static constructor");
+//     }
+//     Program()
+//     {
+//         this.x = 10;
+//         this.y = 20.5;
+//         this.name = "Xocua";
+//     }
+//     Program(int x, double y,string name)
+//     {
+//         this.x = x;
+//         this.y = y;
+//         this.name = name;
+//     }
+//     public override string ToString()
+//     {
+//         return "X = "  + x +" Y = " + y + " name = "  + name;
+//     }
+//     public static void Main(string[] args)
+//     {
+//         Program p = new Program();
+//         Console.WriteLine(p);
+//         Program p2 = new Program(50,783.354,"Lucian");
+//         Console.WriteLine(p2);
+//     }
+
+// }
 }
