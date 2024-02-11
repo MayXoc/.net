@@ -182,5 +182,23 @@ namespace Sum {
  //     obj.show(a);
  //     obj.show(a, userName);
  // }
+
+     // ****** Celcius to farenheit  ******
+
+ //  double ChangeCenToFeren(double c)
+ // {
+ //     double f = ((9 * c) / 5) + 32;
+ //     return f; 
+ // }
+     
+
+ // public static void Main(string[] args)
+ // {
+ //     double c;
+ //     Program obj = new Program();
+ //     Console.WriteLine("Enter celcis value - ");
+ //     c = Convert.ToDouble(Console.ReadLine());
+ //     Console.WriteLine("Here Cel to fer value  {0} - ",obj.ChangeCenToFeren(c));
+ // }
  
 }
