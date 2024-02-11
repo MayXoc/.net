@@ -371,4 +371,54 @@ namespace Sum {
 //         Console.WriteLine(obj);
 //     }
 // }
+
+
+
+ // ******* abstract class 
+
+ 
+// abstract class Training
+// {
+//     public abstract void Name();
+//     public abstract void Email();
+// }
+// class Mayank : Training
+// {
+//     public override void Email()
+//     {
+//         Console.WriteLine("Email as mayankbisht8126@gmail.com");
+//     }
+
+//     public override void Name()
+//     {
+//         Console.WriteLine("Name as Mayank Bisht");
+//     }
+// }
+// class Xocaar : Training
+// {
+//     public override void Email()
+//     {
+//         Console.WriteLine("Email as xocaargaming@gmail.com");
+//     }
+
+//     public override void Name()
+//     {
+//         Console.WriteLine("Name as XOCAAR");
+//     }
+// }
+// public class program
+// {
+//     static void Main(string[] args)
+//     {
+//         Training[] arr = new Training[]
+//         {
+//             new Mayank(),new Xocaar(),
+//         };
+//         foreach(var i in arr)
+//         {
+//             i.Name();
+//             i.Email();
+//         }
+//     }
+// }  
 }
