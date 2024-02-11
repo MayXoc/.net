@@ -296,4 +296,39 @@ namespace Sum {
 
         //     // hence Console is a class and WriteLine is static method;
         // }
+
+
+   // ******** Inheritance and inheritance using constructor also using base keyword
+
+//    class X {
+//     public X()
+//     {
+//         Console.WriteLine("Base class constructor");
+//     }
+//     public void show()
+//     {
+//         Console.WriteLine("Base class Show()");
+//     }
+// }
+
+// class Y : X {
+//     public Y()
+//     {
+//         Console.WriteLine("Derived class constructor");
+//     }
+//     public void show()
+//     {
+//         base.show(); //base keyword used to pass value from derived to base class
+//         Console.WriteLine("Derived class Show()");
+//     }
+// }
+
+
+// class Program
+// {
+//     public static void Main(string[] args) {
+//         Y obj = new Y();
+//         obj.show();
+//     }
+// }
 }
