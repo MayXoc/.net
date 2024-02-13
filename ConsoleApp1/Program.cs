@@ -421,4 +421,32 @@ namespace Sum {
 //         }
 //     }
 // }  
+
+
+
+  // ***** Custom exception throw *****
+
+//   internal class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         int u;
+//         try
+//         {
+//             string input = Console.ReadLine();
+//             bool convert = int.TryParse(input, out u);
+//             if (!convert)
+//             {
+//                 throw new Exception("Nalle shi enter kr");
+//             }
+//         }
+//         catch(Exception e)
+//         {
+//             Console.WriteLine("abbeeyy {0}",e.Message);
+//         }
+//         Console.WriteLine("Remaining code runs");
+       
+
+//     }
+// }
 }
