@@ -449,4 +449,15 @@ namespace Sum {
 
 //     }
 // }
+
+
+
+  //*****      Array vs List    *******
+
+ //  int[] arr = new int[10]; // size needed to initialise array
+  
+ // List<int> list = new List<int>();  //but in case list no need of size
+ 
+ // Console.WriteLine(arr.Length); 
+ // Console.WriteLine(list.Count);//This proves tha list grows dynamically
 }
