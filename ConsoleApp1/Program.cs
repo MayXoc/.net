@@ -105,7 +105,8 @@ namespace Sum {
 
   // }
 
- // ***   How Strings are stored in c#   ***
+ // ***   How Strings are stored in c#   *******
+ 
 
   // public static void Main(string[] args)
   // {
@@ -117,7 +118,9 @@ namespace Sum {
   //     Console.WriteLine(s5.GetHashCode());  // Conclusion for same value there is no new memory allocate
   // }
 
- //****  using Params keyword  for taking n number of arguments   ***
+ //****  using Params keyword  for taking n number of arguments   *****
+
+ 
 
 //  public void show(params string[] name)
 // {  
@@ -158,6 +161,7 @@ namespace Sum {
 
 
 // ****      Method overloading        *****
+ 
 
  // void show()
  // {
@@ -182,5 +186,278 @@ namespace Sum {
  //     obj.show(a);
  //     obj.show(a, userName);
  // }
+
+     // ****** Celcius to farenheit  ******
+
  
+
+ //  double ChangeCenToFeren(double c)
+ // {
+ //     double f = ((9 * c) / 5) + 32;
+ //     return f; 
+ // }
+     
+
+ // public static void Main(string[] args)
+ // {
+ //     double c;
+ //     Program obj = new Program();
+ //     Console.WriteLine("Enter celcis value - ");
+ //     c = Convert.ToDouble(Console.ReadLine());
+ //     Console.WriteLine("Here Cel to fer value  {0} - ",obj.ChangeCenToFeren(c));
+ // }
+
+
+//******   overriding ToString method    *******
+
+ 
+// int x;
+// double y;
+// string? name;
+// public override string ToString()
+// {
+//     return "Employ no - " + x + " Experience " + y + " Name " + name;
+// }
+
+// public static void Main(string[] args)
+// {
+//     Program p = new Program();
+//     p.x = 1;
+//     p.y = 2.5;
+//     p.name = "XOCAAR";
+//     Console.WriteLine(p);
+    
+// }
+
+
+ // ********* Static Constructor
+
+ 
+  //  int x;
+  // double y;
+  // string name;
+  // // using static constructor 
+  // static Program()
+  // {
+  //     Console.WriteLine("This is static constructor");
+  // }
+  // public static void Main(string[] args)
+  // {
+
+  // }
+
+     // ******  instance Constructor  and constructor overloading
+
+ 
+//     int x;
+//     double y;
+//     string? name;
+    
+//     static Program()
+//     {
+//         Console.WriteLine("This is static constructor");
+//     }
+//     Program()
+//     {
+//         this.x = 10;
+//         this.y = 20.5;
+//         this.name = "Xocua";
+//     }
+//     Program(int x, double y,string name)
+//     {
+//         this.x = x;
+//         this.y = y;
+//         this.name = name;
+//     }
+//     public override string ToString()
+//     {
+//         return "X = "  + x +" Y = " + y + " name = "  + name;
+//     }
+//     public static void Main(string[] args)
+//     {
+//         Program p = new Program();
+//         Console.WriteLine(p);
+//         Program p2 = new Program(50,783.354,"Lucian");
+//         Console.WriteLine(p2);
+//     }
+
+// }
+
+
+      // ******* Static members   ******
+ 
+        // static int n;
+        // static void Main(string[] args)
+        // {
+
+        //     Program.n = 56;
+          
+        //     Console.WriteLine(Program.n);
+
+        //     // hence Console is a class and WriteLine is static method;
+        // }
+
+
+   // ******** Inheritance and inheritance using constructor also using base keyword
+ 
+
+//    class X {
+//     public X()
+//     {
+//         Console.WriteLine("Base class constructor");
+//     }
+//     public void show()
+//     {
+//         Console.WriteLine("Base class Show()");
+//     }
+// }
+
+// class Y : X {
+//     public Y()
+//     {
+//         Console.WriteLine("Derived class constructor");
+//     }
+//     public void show()
+//     {
+//         base.show(); //base keyword used to pass value from derived to base class
+//         Console.WriteLine("Derived class Show()");
+//     }
+// }
+
+
+// class Program
+// {
+//     public static void Main(string[] args) {
+//         Y obj = new Y();
+//         obj.show();
+//     }
+// }
+
+
+
+  // ******* using base constructor to pass data from derived to base class
+
+ 
+//  class X {
+//     int a;
+//     int b; int c; int d;
+//     public X(int A,int B,int C,int D)
+//     {
+//         this.a = A;
+//         this.b = B;
+//         this.c = C;
+//         this.d = D;
+//     }
+//     public override string ToString()
+//     {
+//         return "A = " + a + " B = " + b + " C = " + c + " D = " + d;
+//     }
+
+// }
+
+// class Y : X {
+//     public Y(int a,int b,int c ,int d) : base(a, b, c, d)
+//     {
+
+//     }
+   
+// }
+
+
+// class Program
+// {
+//     public static void Main(string[] args) {
+//         Y obj = new Y(2,4,5,7);
+//         Console.WriteLine(obj);
+//     }
+// }
+
+
+
+ // ******* abstract class 
+
+ 
+// abstract class Training
+// {
+//     public abstract void Name();
+//     public abstract void Email();
+// }
+// class Mayank : Training
+// {
+//     public override void Email()
+//     {
+//         Console.WriteLine("Email as mayankbisht8126@gmail.com");
+//     }
+
+//     public override void Name()
+//     {
+//         Console.WriteLine("Name as Mayank Bisht");
+//     }
+// }
+// class Xocaar : Training
+// {
+//     public override void Email()
+//     {
+//         Console.WriteLine("Email as xocaargaming@gmail.com");
+//     }
+
+//     public override void Name()
+//     {
+//         Console.WriteLine("Name as XOCAAR");
+//     }
+// }
+// public class program
+// {
+//     static void Main(string[] args)
+//     {
+//         Training[] arr = new Training[]
+//         {
+//             new Mayank(),new Xocaar(),
+//         };
+//         foreach(var i in arr)
+//         {
+//             i.Name();
+//             i.Email();
+//         }
+//     }
+// }  
+
+
+
+  // ***** Custom exception throw *****
+
+//   internal class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         int u;
+//         try
+//         {
+//             string input = Console.ReadLine();
+//             bool convert = int.TryParse(input, out u);
+//             if (!convert)
+//             {
+//                 throw new Exception("Nalle shi enter kr");
+//             }
+//         }
+//         catch(Exception e)
+//         {
+//             Console.WriteLine("abbeeyy {0}",e.Message);
+//         }
+//         Console.WriteLine("Remaining code runs");
+       
+
+//     }
+// }
+
+
+
+  //*****      Array vs List    *******
+
+ //  int[] arr = new int[10]; // size needed to initialise array
+  
+ // List<int> list = new List<int>();  //but in case list no need of size
+ 
+ // Console.WriteLine(arr.Length); 
+ // Console.WriteLine(list.Count);//This proves tha list grows dynamically
 }
