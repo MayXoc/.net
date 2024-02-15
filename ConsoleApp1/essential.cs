@@ -55,7 +55,7 @@ namespace ConsoleApp1
     }
     
       
-    // Transaction log builder
+    // ******    Employee management
 
      public class EmployeeManagement
     {
