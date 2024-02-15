@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Net;
+
 namespace Prog
 {
-    class program
+    class Program
     {
-
-        //****   Downloading google main page
-       
-         using(WebClient client = new WebClient())
+        public static void Main(string[] args)
+        {
+            //**** Downloading Google main page 
+            using (WebClient client = new WebClient())
             {
                 string googleMainPage = client.DownloadString("https://www.google.com/");
-    Console.WriteLine(googleMainPage);
+                Console.WriteLine(googleMainPage);
             }
-        
+        }
     }
 }
