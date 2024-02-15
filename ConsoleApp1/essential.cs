@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    
-    
+
+
     //****Practice program 
 
 
@@ -52,5 +52,60 @@ namespace ConsoleApp1
  
             return totalIncome;
         }
-    }*/
+    }
+    
+      
+    // Transaction log builder
+
+     public class EmployeeManagement
+    {
+        public string AssignDepartment(string employeeData)
+        {
+            // Wrap everything within try...catch...finally. (Lesson: Try Catch Finally)
+            try
+            {
+                if (string.IsNullOrEmpty(employeeData)) {
+                    // Throw exception if name is empty. (Lesson: Exceptions & Throw Keyword)
+                    throw new InvalidDataException();
+                }
+                
+                // Getting name and department. (Lesson: String Manipulation, Formatting and More)
+                string[] details = employeeData.Trim().Split(',');
+                string employeeName = details[0].Trim();
+ 
+                if (string.IsNullOrEmpty(employeeName)) {
+                    // Throw exception if name is empty. (Lesson: Exceptions & Throw Keyword)
+                    throw new ArgumentException();
+                }
+                
+                // Format employeeName with first letter capitalized.
+                employeeName = char.ToUpper(employeeName[0]) + employeeName.Substring(1).ToLowerInvariant();
+                
+                // Checking the first character of the employee's name to assign the department. (Lesson: Conditional Statements)
+                string department = (employeeName.ToUpper()[0] >= 'A' && employeeName.ToUpper()[0] <= 'M') ? "Department 1." : "Department 2.";
+ 
+                // Formatting the final string that needs to be returned.
+                return $"{employeeName} is assigned to {department}";
+            }
+            catch (ArgumentException)
+            {
+                // In production ready application this would have been logged - but here we are printing it
+                return "Empty employee name is not allowed.";
+            }
+            catch (InvalidDataException)
+            {
+                // In production ready application this would have been logged - but here we are printing it
+                return "Employee data cannot be null.";
+            }
+            catch (Exception)
+            {
+                // Exception Handling: Catch block to handle all exceptions.
+                // Here we are returning a generic error message as we do not know the cause of the error.
+                // In production ready application this would have been logged - but here we are printing it
+                return "An error occurred."; 
+            }
+        }
+    }
+     
+     */
 }
