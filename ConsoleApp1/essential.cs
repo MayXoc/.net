@@ -189,6 +189,61 @@ namespace ConsoleApp1
             return heights[heights.Length - 1];
         }
     }
+
+
+    // ****** SurroundingPositionFinder  ***** 
+
+
+    public class SurroundingPositionFinder
+    {
+        public List<int[]> FindSurroundingPositions(int[,] arr, int[] position)
+        {
+            // Check validity of the position.
+            if (position == null || position.Length != 2 || !IsValidPosition(arr, position[0], position[1]))
+            {
+                throw new ArgumentException("Invalid input. Please provide valid position.");
+            }
+    
+            // Find the surrounding positions.
+            return GetPositions(arr, position);
+        }
+        
+        // Looking for surrounding positions for up, down, left and right. (Lesson: Jagged Arrays vs Multidimensional Arrays)
+        private List<int[]> GetPositions(int[,] arr, int[] position)
+        {
+            List<int[]> neighbors = new List<int[]>();
+            int row = position[0];
+            int col = position[1];
+    
+            // Check Up
+            if (row > 0) {
+                neighbors.Add(new int[] { row - 1, col});
+            }
+            
+            // Check Down
+            if (row < arr.GetLength(0) - 1) {
+                neighbors.Add(new int[] { row + 1, col});
+            }
+            
+            // Check Left
+            if (col > 0) {
+                neighbors.Add(new int[] { row, col - 1});
+            }
+            
+            // Check Right
+            if (col < arr.GetLength(1) - 1) {
+                neighbors.Add(new int[] { row, col + 1});
+            }
+    
+            return neighbors;
+        }
+        
+        // Check and make sure given position is within bounds
+        private bool IsValidPosition(int[,] arr, int row, int col)
+        {
+            return (row >= 0 && row < arr.GetLength(0) && col >= 0 && col < arr.GetLength(1));
+        }
+    }
      
      */
 }
