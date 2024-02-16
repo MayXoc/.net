@@ -106,6 +106,46 @@ namespace ConsoleApp1
             }
         }
     }
+
+
+
+    // ****** Transaction Log Builder ******
+
+
+     public class TransactionLogBuilder
+    {
+        public string BuildLog(List<int[]> transactions)
+        {
+            // Use string builder for our final log. (Lesson: StringBuilder)
+            StringBuilder log = new StringBuilder();
+    
+            // Iterate through all transactions. (Lesson: For Loop)
+            for (int i = 0; i < transactions.Count; i++)
+            {
+                if (transactions[i].Length != 2)
+                {
+                    // Defensive programming - make sure only valid arguments are used. (Lesson: Exceptions & Throw Keyword)
+                    throw new ArgumentException("Each transaction must contain exactly two elements.");
+                }
+ 
+                int itemID = transactions[i][0];
+                if (itemID < 0)
+                {
+                    throw new ArgumentException("Item ID cannot be negative.");
+                }
+    
+                int quantitySold = transactions[i][1];
+                if (quantitySold < 0)
+                {
+                    throw new ArgumentException("Quantity sold cannot be negative.");
+                }
+    
+                log.AppendLine($"Transaction: ItemID is {itemID} and Quantity sold is {quantitySold}");
+            }
+    
+            return log.ToString();
+        }
+    }
      
      */
 }
