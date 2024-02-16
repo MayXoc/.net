@@ -146,6 +146,49 @@ namespace ConsoleApp1
             return log.ToString();
         }
     }
+
+
+
+    //******* Tallest Building Finder  *****
+
+    
+        public int FindTallestBuilding(int[] heights, int n)
+        {
+            // Checking that heights array is not empty to avoid exceptions.
+            if (heights == null || heights.Length == 0)
+            {
+                throw new ArgumentException("Height array should not be null or empty.");        
+            }
+ 
+            // Checking that n is not negative.
+            if (n < 0) {
+                throw new ArgumentOutOfRangeException("The number of growth spurts cannot be negative.");
+            }
+            
+            // Sorting heights array ascending order to know exactly - tallest building index.
+            Array.Sort(heights);
+            
+            // Using for loop to go through growth spurts. (Lesson: For Loop)
+            for (int spurt = 0; spurt < n; spurt++)
+            {
+                // Get the min height
+                int min = heights[0];
+                int i = 0;
+ 
+                // Using while loop to iterate heights array and only increase min heights equal to it
+                // Using while loop as it is cleaner to perform logic in one line instead of for loop with additional conditional statement
+                // (Lesson: While Loop)
+                while(i < heights.Length && heights[i] == min)
+                {
+                    heights[i]++;
+                    i++;
+                }
+            }
+            
+            // Tallest building is always going to be the last element after sorting and even incrementing per growth spurt
+            return heights[heights.Length - 1];
+        }
+    }
      
      */
 }
