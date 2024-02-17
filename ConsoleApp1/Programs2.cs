@@ -1,20 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Net;
+using System.Threading.Tasks;
+using ConsoleApp1;
 namespace Prog
 {
     public class Program
 
     {
-        public class person
-        {
-            public person(string fname, string lname)
-            {
-                firstname = fname;
-                lastname = lname;
-            }
-            public string firstname { get; }
-            public string lastname { get; }
-        }
+       
         public static void Main(string[] args)
         {
             /*  //**** Downloading Google main page 
@@ -23,9 +19,15 @@ namespace Prog
                   string googleMainPage = client.DownloadString("https://www.google.com/");
                   Console.WriteLine(googleMainPage);
               }*/
-            person x = null;
-            person y = x ?? new person("Default","person");
-            Console.WriteLine(y.firstname);
+            
+           Inheritance x = new Inheritance();
+            x.Firstname = "Mayank"; //derived class object accesing the base class properties
+            x.Lastname = "Bisht";
+         
+            Console.WriteLine(x.Firstname);
+            Console.WriteLine(x.Lastname);
+
+
         }
     }
 }
