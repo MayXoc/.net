@@ -246,4 +246,47 @@ namespace ConsoleApp1
     }
      
      */
+    
+    public class person
+
+    {
+        public string _firstname="Xocaar";
+        public string _lastname;
+        
+        public string Firstname
+        {
+            get
+            {
+                return _firstname;
+            }
+            set
+            {
+                if (value.Length < 1) // Use the provided value instead of the property's current value
+                {
+                    Console.WriteLine("Invalid input");
+                }
+                else
+                {
+                    _firstname = value;
+                }
+            }
+        }
+        public string Lastname
+        {
+            get
+            {
+                return _lastname;
+            }
+            set { 
+                if(value.Length < 1)
+                {
+                    throw new ArgumentException("Abbey apna last name bhi bhul gya kya");
+                }
+                _lastname = value;
+
+            }
+        }
+    }
+
+
 }
