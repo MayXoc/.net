@@ -26,6 +26,8 @@ namespace Prog
          
             Console.WriteLine(x.Firstname);
             Console.WriteLine(x.Lastname);
+            x.employ("mayank", 1, 1_00_000);
+            x.display();
 
 
         }
