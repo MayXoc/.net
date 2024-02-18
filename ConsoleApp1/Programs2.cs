@@ -49,6 +49,11 @@ namespace Prog
                 Console.WriteLine($"Title: {book.Title}, Author: {book.Author}");
             }
 
+            // creating dependency for a class
+            Car car = new Car();
+            Person person = new Person(car);  //dependency is injected into car object so bassicaly car is a dependency is injected to a person object
+            person.drive();
+
 
         }
     }
