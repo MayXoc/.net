@@ -6,6 +6,7 @@ using System.Net;
 using System.Threading.Tasks;
 using ConsoleApp1;
 using Coding.Exercise;
+using System.IO;
 namespace Prog
 {
     public class Program
@@ -53,6 +54,13 @@ namespace Prog
             Car car = new Car();
             Person person = new Person(car);  //dependency is injected into car object so bassicaly car is a dependency is injected to a person object
             person.drive();
+            string[] hola = { "Yooo ist xocaar here", "And i hope everyone in this planet staty safe and healthy" };
+            File.WriteAllLines("MyFirst.txt", hola);
+            string[] answer=File.ReadAllLines("MyFirst.txt");
+            foreach(string line in answer)
+            {
+                Console.WriteLine(line);
+            }
 
 
         }
