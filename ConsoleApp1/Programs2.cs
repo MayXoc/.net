@@ -62,6 +62,12 @@ namespace Prog
                 Console.WriteLine(line);
             }
 
+            // if the file is too large then 
+            foreach(string line in File.ReadLines("MyFirst.txt"))
+            {
+                Console.WriteLine(line);  //best way to deal with the large file
+            }
+
 
         }
     }
