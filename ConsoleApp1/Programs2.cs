@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ConsoleApp1;
 using Coding.Exercise;
 using System.IO;
+using System.Reflection;
 namespace Prog
 {
     public class Program
@@ -67,6 +68,25 @@ namespace Prog
             {
                 Console.WriteLine(line);  //best way to deal with the large file
             }
+
+            //Ref Local
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, };
+            int i = arr[3];
+            i = 70;
+            Console.WriteLine("Value of array 4th element - {0} ", arr[3]);
+            Console.WriteLine("Changing the byValue variable effect in array  - "+arr[3]+" No change");
+            ref int o = ref arr[3];
+            o = 600;
+            Console.WriteLine("Changing the byRef variable effect in array  - " + arr[3] + " Means the value is changed");
+
+            //Ref return
+            int byValue = getRefOfIndex(3);
+            byValue = 30;
+            Console.WriteLine("Changing byVale - "+  arr[3]+" No change here");
+            ref int byRef = ref getRefOfIndex(3);
+            byRef = 30;
+            Console.WriteLine("Changing byRef  - " + arr[3] + " Change happned here");
+            ref int getRefOfIndex(int index) =>  ref arr[index];
 
 
         }
