@@ -99,6 +99,10 @@ namespace Prog
             Console.WriteLine("\nNested function****\n");
             NestedFunction h = new NestedFunction();
             h.HH();
+            //Patten match making
+            Console.WriteLine("\nPattern match making (is , when) keyword used ****\n");
+            PatternMatching patternMatching = new PatternMatching();
+            patternMatching.Run();
         }
     }
 }
