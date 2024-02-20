@@ -32,6 +32,7 @@ namespace Prog
             x.employ("mayank", 1, 1_00_000);
             x.display();
             // Create an instance of PersonalDigitalLibrary
+            Console.WriteLine("\n  PersonalDigitalLibrary ****\n");
             PersonalDigitalLibrary myLibrary = new PersonalDigitalLibrary();
 
             // Create some book instances
@@ -52,9 +53,11 @@ namespace Prog
             }
 
             // creating dependency for a class
+            Console.WriteLine("\n creating dependency for a class ****\n");
             Car car = new Car();
             Person person = new Person(car);  //dependency is injected into car object so bassicaly car is a dependency is injected to a person object
             person.drive();
+            Console.WriteLine("\n Reading and Writing files ****\n");
             string[] hola = { "Yooo ist xocaar here", "And i hope everyone in this planet staty safe and healthy" };
             File.WriteAllLines("MyFirst.txt", hola);
             string[] answer=File.ReadAllLines("MyFirst.txt");
@@ -73,6 +76,7 @@ namespace Prog
             int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, };
             int i = arr[3];
             i = 70;
+            Console.WriteLine("\n Local ref anf return ref  ****\n");
             Console.WriteLine("Value of array 4th element - {0} ", arr[3]);
             Console.WriteLine("Changing the byValue variable effect in array  - "+arr[3]+" No change");
             ref int o = ref arr[3];
@@ -87,7 +91,8 @@ namespace Prog
             byRef = 30;
             Console.WriteLine("Changing byRef  - " + arr[3] + " Change happned here");
             ref int getRefOfIndex(int index) =>  ref arr[index];
-
+            Deconstruct deconstruction = new Deconstruct();
+            deconstruction.run();
 
         }
     }
