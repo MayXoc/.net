@@ -8,6 +8,7 @@ using ConsoleApp1;
 using Coding.Exercise;
 using System.IO;
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 namespace Prog
 {
     public class Program
@@ -91,9 +92,13 @@ namespace Prog
             byRef = 30;
             Console.WriteLine("Changing byRef  - " + arr[3] + " Change happned here");
             ref int getRefOfIndex(int index) =>  ref arr[index];
+            //Deconstruction 
             Deconstruct deconstruction = new Deconstruct();
             deconstruction.run();
-
+            //Local Function nested function
+            Console.WriteLine("\nNested function****\n");
+            NestedFunction h = new NestedFunction();
+            h.HH();
         }
     }
 }
