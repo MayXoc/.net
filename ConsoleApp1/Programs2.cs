@@ -155,6 +155,25 @@ namespace Prog
             Console.WriteLine(lightBulb.Status());
             Console.WriteLine(thermostat.Status());
             Console.WriteLine(doorLock.Status());
+
+            //Creating  RPG game simulator
+
+            Console.WriteLine("\nRPG game simulator****\n");
+
+            // Create instances of RPG characters
+            RPGCharacter hero = new RPGCharacter("Hero", 200);
+            List<RPGCharacter> enemies = new List<RPGCharacter>
+            {
+                new RPGCharacter("Enemy1", 50),
+                new RPGCharacter("Enemy2", 60),
+                new RPGCharacter("Enemy3", 70)
+            };
+
+            // Create an instance of RPGSimulator
+            RPGSimulator simulator = new RPGSimulator(hero, enemies);
+
+            // Start the game
+            simulator.StartGame();
         }
     }
 }
