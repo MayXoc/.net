@@ -9,6 +9,7 @@ using Coding.Exercise;
 using System.IO;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using SalesCalculate;
 namespace Prog
 {
     public class Program
@@ -103,6 +104,26 @@ namespace Prog
             Console.WriteLine("\nPattern match making (is , when) keyword used ****\n");
             PatternMatching patternMatching = new PatternMatching();
             patternMatching.Run();
+
+            //SalesCalculator
+            Console.WriteLine("\nSalesCalculator****\n");
+
+            // Create an array of Sale instances
+            Sale[] sales = new Sale[]
+            {
+                new Sale { itemSold = "Product A", saleAmount = 100 },
+                new Sale { itemSold = "Product B", saleAmount = 150 },
+                new Sale { itemSold = "Product C", saleAmount = 200 }
+            };
+
+            // Create a SalesCalculator instance with the array of sales
+            SalesCalculator calculator = new SalesCalculator(sales);
+
+            // Calculate total sales
+            double totalSales = calculator.CalculateTotalSales();
+
+            // Display the total sales
+            Console.WriteLine($"Total sales: {totalSales}");
         }
     }
 }
