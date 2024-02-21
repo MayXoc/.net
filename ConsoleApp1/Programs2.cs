@@ -174,6 +174,24 @@ namespace Prog
 
             // Start the game
             simulator.StartGame();
+
+
+            // Creating Virtual Music Box
+
+            Console.WriteLine("\nVirtual Music Box****\n");
+
+            // Create instances of instruments
+            List<Instrument> instruments = new List<Instrument>
+            {
+                new Guitar(),
+                new Drum()
+            };
+
+            // Create an instance of VirtualMusicBand
+            VirtualMusicBand musicBand = new VirtualMusicBand(instruments);
+
+            // Play all instruments in the band
+            musicBand.PlayAll();
         }
     }
 }
