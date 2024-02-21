@@ -10,6 +10,7 @@ using System.IO;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using SalesCalculate;
+using SmartHome;
 namespace Prog
 {
     public class Program
@@ -124,6 +125,36 @@ namespace Prog
 
             // Display the total sales
             Console.WriteLine($"Total sales: {totalSales}");
+
+
+            //Smart home System
+
+            Console.WriteLine("\nSmart home System****\n");
+
+            // Create instances of smart devices
+            ISmartDevice lightBulb = new LightBulb();
+            ISmartDevice thermostat = new Thermostat();
+            ISmartDevice doorLock = new DoorLock();
+
+            // Turn on the devices
+            lightBulb.TurnOn();
+            thermostat.TurnOn();
+            doorLock.TurnOn();
+
+            // Display status of the devices
+            Console.WriteLine(lightBulb.Status());
+            Console.WriteLine(thermostat.Status());
+            Console.WriteLine(doorLock.Status());
+
+            // Turn off the devices
+            lightBulb.TurnOff();
+            thermostat.TurnOff();
+            doorLock.TurnOff();
+
+            // Display status of the devices after turning them off
+            Console.WriteLine(lightBulb.Status());
+            Console.WriteLine(thermostat.Status());
+            Console.WriteLine(doorLock.Status());
         }
     }
 }
