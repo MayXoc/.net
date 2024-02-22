@@ -17,6 +17,9 @@ namespace ConsoleApp1
             //Unnamed tuple
             var UnnamedTuple = getunnamedtuple();
             Console.WriteLine($"{UnnamedTuple.Item1} {UnnamedTuple.Item2} {UnnamedTuple.Item3}");
+            //using deconstruction method
+            var (FirstnameV1, LastnameV1, ageV1) = getunnamedtuple();
+            Console.WriteLine($"using deconstructing method {FirstnameV1} {LastnameV1} {ageV1}");
         }
         public (string, string, int) getunnamedtuple()
         {
