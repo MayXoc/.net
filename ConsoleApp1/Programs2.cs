@@ -192,6 +192,13 @@ namespace Prog
 
             // Play all instruments in the band
             musicBand.PlayAll();
+
+
+            // Tuple
+
+            Console.WriteLine("\nTuple****\n");
+            allTuple tuple = new allTuple();
+            tuple.run();
         }
     }
 }

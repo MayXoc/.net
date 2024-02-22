@@ -10,9 +10,17 @@ namespace ConsoleApp1
     {
         public void run()
         {
-            //old way of creating tuple
+            //Old way of creating tuple
             Tuple<string, string, int> oldtuple = getoldtuple();
-            Console.WriteLine($"{oldtuple.Item1} {oldtuple.Item2}");
+            Console.WriteLine($"{oldtuple.Item1} {oldtuple.Item2} {oldtuple.Item3}");
+
+            //Unnamed tuple
+            var UnnamedTuple = getunnamedtuple();
+            Console.WriteLine($"{UnnamedTuple.Item1} {UnnamedTuple.Item2} {UnnamedTuple.Item3}");
+        }
+        public (string, string, int) getunnamedtuple()
+        {
+            return ("Xocaar", "op", 21); // no need to use Tuple.create
         }
         public Tuple<string, string, int> getoldtuple()
         {
