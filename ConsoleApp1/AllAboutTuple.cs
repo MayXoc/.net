@@ -20,6 +20,15 @@ namespace ConsoleApp1
             //using deconstruction method
             var (FirstnameV1, LastnameV1, ageV1) = getunnamedtuple();
             Console.WriteLine($"using deconstructing method {FirstnameV1} {LastnameV1} {ageV1}");
+            //named tuple 
+            var (FirstnameV2, LastnameV2, ageV2) = getNamedtuple();
+            Console.WriteLine($"Named tuple -  {FirstnameV2} {LastnameV2} {ageV2}"); // still feel nhi aa rha hai 
+            var getnametuple = getNamedtuple();
+            Console.WriteLine($"By Best method - {getnametuple.Firstname} {getnametuple.lastname} {getnametuple.age}"); // aab maza aaya now aab pta chal rha ki konsa item konsa hai
+        }
+        public (string Firstname,string lastname,int age) getNamedtuple()
+        {
+            return ("Xocaar", "op", 21);
         }
         public (string, string, int) getunnamedtuple()
         {
