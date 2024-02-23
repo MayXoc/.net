@@ -15,7 +15,15 @@ namespace ConsoleApp1
             // now its time to access these hobbies
             //By using LINQ and Lambda Expression
             var hobbie = hobbies.Where(h => h.Name.Equals("Games"));
-            var anotherHobbie = from h in hobbies where h.Name.Equals("Games") select h;//using Query method both give the same output 
+            var anotherHobbie = from h in hobbies where h.Name.Equals("Games") select h;//using Query method both give the same output
+
+            var EveryhobbieExceptFirstOne = hobbies.Skip(1); //now it will give output Batminton and Music and skip the First one
+            var HobbieOnlySecondOne = hobbies.Skip(1).Take(1);//now it will only one after skipping
+            Console.WriteLine("Hobby at index 1:");
+            foreach (var item in HobbieOnlySecondOne)
+            {
+                Console.WriteLine(item.Name);
+            }
         }
 
     }
