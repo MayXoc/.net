@@ -204,6 +204,38 @@ namespace Prog
             Console.WriteLine("\nLINQ****\n");
             AllAboutLinq lq = new AllAboutLinq();
             lq.run();
+
+
+            //WeatherAnalyser coading exercise
+
+            Console.WriteLine("\nWeatherAnalyser****\n");
+
+            // Create a list of weather data
+            List<(int Day, int MinTemp, int MaxTemp)> weatherData = new List<(int Day, int MinTemp, int MaxTemp)>
+            {
+                (1, 10, 25),
+                (2, 15, 30),
+                (3, 20, 35),
+                (4, 18, 28),
+                (5, 22, 32)
+            };
+
+            // Create an instance of WeatherDataAnalyzer
+            WeatherDataAnalyzer analyzer = new WeatherDataAnalyzer();
+
+            // Analyze weather data
+            var result = analyzer.Analyze(weatherData);
+
+            // Output the analysis result
+            if (result.HasValue)
+            {
+                var (day, tempRange, isUnusual) = result.Value;
+                Console.WriteLine($"Day: {day}, Temperature Range: {tempRange}, Unusual: {isUnusual}");
+            }
+            else
+            {
+                Console.WriteLine("No unusual temperature swings found.");
+            }
         }
     }
 }
