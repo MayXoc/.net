@@ -199,6 +199,11 @@ namespace Prog
             Console.WriteLine("\nTuple****\n");
             allTuple tuple = new allTuple();
             tuple.run();
+
+            //LINQ
+            Console.WriteLine("\nLINQ****\n");
+            AllAboutLinq lq = new AllAboutLinq();
+            lq.run();
         }
     }
 }
