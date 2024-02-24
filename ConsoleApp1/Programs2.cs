@@ -236,6 +236,54 @@ namespace Prog
             {
                 Console.WriteLine("No unusual temperature swings found.");
             }
+
+
+            //Task Management coading exercise
+
+            Console.WriteLine("\nTask Management****\n");
+
+            // Create an instance of TaskManagement
+            var taskManager = new TaskManagement();
+
+            // Add some tasks
+            taskManager.AddTask(1, "Complete project", new DateTime(2024, 2, 25), Coding.Exercise.TaskStatus.InProgress);
+            taskManager.AddTask(2, "Submit report", new DateTime(2024, 2, 24), Coding.Exercise.TaskStatus.NotStarted);
+            taskManager.AddTask(3, "Review document", new DateTime(2024, 2, 26), Coding.Exercise.TaskStatus.NotStarted);
+
+            // Display task count
+            Console.WriteLine($"Total number of tasks: {taskManager.TaskCount()}");
+
+            // Find a task by its ID
+            var taskId = 2;
+            var foundTask = taskManager.FindTaskById(taskId);
+            if (foundTask != null)
+            {
+                Console.WriteLine($"Task with ID {taskId} found: {foundTask.Value.title}");
+            }
+            else
+            {
+                Console.WriteLine($"Task with ID {taskId} not found.");
+            }
+
+            // Change task status
+            taskId = 1;
+            var newStatus = Coding.Exercise.TaskStatus.Completed;
+            if (taskManager.ChangeTaskStatus(taskId, newStatus))
+            {
+                Console.WriteLine($"Status of task with ID {taskId} changed to {newStatus}");
+            }
+            else
+            {
+                Console.WriteLine($"Failed to change status of task with ID {taskId}");
+            }
+
+            // Get tasks due today
+            var tasksDueToday = taskManager.GetTasksDueToday();
+            Console.WriteLine("Tasks due today:");
+            foreach (var task in tasksDueToday)
+            {
+                Console.WriteLine($"ID: {task.id}, Title: {task.title}, Due Date: {task.dueDate}, Status: {task.status}");
+            }
         }
     }
 }
