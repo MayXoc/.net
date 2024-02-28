@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class InputConverter
+    public class InputConverter
     {
        public double ConvertIntoNumeric(string input)
         {
@@ -15,7 +15,7 @@ namespace ConsoleApp1
             return convertedNumber;
         } 
     }
-    class CalculatorEngine
+    public class CalculatorEngine
     {
         public double calculate(string Operator,double firstNumber,double secondNumber) 
         {
@@ -28,15 +28,15 @@ namespace ConsoleApp1
                     break;
                 case "sub":
                 case "-":
-                    return firstNumber + secondNumber;
+                    return firstNumber - secondNumber;
                     break;
                 case "multiply":
                 case "*":
-                    return firstNumber + secondNumber;
+                    return firstNumber * secondNumber;
                     break;
                 case "divide":
                 case "/":
-                    return firstNumber + secondNumber;
+                    return firstNumber / secondNumber;
                     break;
                 default:
                     throw new ArgumentException("Given Opreator not recognised");
