@@ -28,34 +28,33 @@ namespace ConsoleApp1
                     default:
                         Console.WriteLine("Entered Option not recognised");
                         break;
-                } while (ContinueUnscrambling)
-                {
-                    Console.WriteLine("You want to continue type Y / N - ");
-                    var Decision = Console.ReadLine() ?? string.Empty;
-                    switch (Decision.ToUpper())
-                    {
-                        case "Y":
-                            break; 
-                        case "N":
-                            ContinueUnscrambling = false;
-                            break; 
-                        default:
-                            Console.WriteLine("Entered Option not recognised");
-                            break;
-                    }
                 }
+                Console.WriteLine("You want to continue type Y / N - ");
+                var Decision = Console.ReadLine() ?? string.Empty;
+                switch (Decision.ToUpper())
+                {
+                    case "Y":
+                        break;
+                    case "N":
+                        ContinueUnscrambling = false;
+                        break;
+                    default:
+                        Console.WriteLine("Entered Option not recognised");
+                        break;
+                }
+            } while (ContinueUnscrambling);
+               
             }
+        public void WordUnscramblingManullyCase()
+        {
+
+
         }
 
-        private void WordUnscramblingManullyCase()
+        public void WordUnscramblingFileCase()
         {
-            
 
-        }
-
-        private void WordUnscramblingFileCase()
-        {
-            
         }
     }
 }
+
